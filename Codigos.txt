@@ -1,0 +1,90 @@
+Ecuación Resp: 3.7
+#include <stdio.h>
+
+int main()
+{
+    int x = 3;
+    float z;
+
+    z = ((1 / (float)2) * x +
+     ((x + 3) / (float)2) * (2 * (x * x))) 
+     / ((2 + 3) * x);
+
+    printf("z es igual a %.2f", z); 
+    return 0;
+}
+
+
+Figura 1
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float l=7, pt , at, hipot,perc,att,ac,ar;
+    
+    hipot = sqrt(pow(l,2)+pow(3*l,2));
+    perc = (3.1416*(l*3))/2;
+    
+    att = ((3*l)*l)/2;
+    ac = (3.1416*pow(3*(l/2),2))/2;
+    ar = 3*l*l;
+
+    pt= (7*l)+(2*hipot)+perc;
+    at= (att*2)+(ar*2)+ac;
+    
+    printf("Perimetro Total = %f",pt);
+    printf("\n");
+    printf("Area Total = %f",at);
+
+    return 0;
+}
+
+
+Figura 2
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float l1=7,l2=(7*3)/5.0,l3=7/5.0,pt,at,perc,areacircu;
+    //Perimetro
+    perc = (3.1416*l1)/2;
+    pt = (17*l3) + perc + (l2*2);
+    
+    //Area
+    areacircu = (3.1416*pow(l1,2)/4)/2;
+    
+    at = (l1*l1)+((l3*l3)*2)+((l3*l2)*2)+areacircu;
+    
+    printf("Perimetro Total = %f",pt);
+    printf("\n");
+    printf("Area Total = %f",at);
+
+    return 0;
+}
+
+
+Cover 
+#include <stdio.h>
+
+int main() 
+{
+    float desc = 0.25;
+    int cover = 300;
+    int nummuj = 0;
+    int numhom = 0;
+    float total = 0.0;
+
+    printf("Ingrese numero de mujeres: ");
+    scanf("%d", &nummuj);
+
+    printf("Ingrese numero de hombres: ");
+    scanf("%d", &numhom);
+
+    total = (nummuj * cover * (1 - desc)) + (numhom * cover);
+    
+    printf("El total es: %.2f\n", total);
+
+    return 0;
+}
