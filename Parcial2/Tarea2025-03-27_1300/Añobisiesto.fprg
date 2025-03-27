@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="A&#241;obisiesto"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-26 11:11:33 p. m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLVU3QTZMMjc7MjAyNS0wMy0yNjsxMDoxODo1NyBwLiBtLjszMjQx"/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLVU3QTZMMjc7MjAyNS0wMy0yNjsxMToxMTozMyBwLiBtLjsxOzMzMzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A&#241;os" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ingresar el a&#241;o&quot;" newline="True"/>
+            <input variable="A&#241;os"/>
+            <if expression="A&#241;os % 4 == 0">
+                <then>
+                    <output expression="&quot;El a&#241;o es bisiesto&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;El a&#241;o no es bisiesto&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
