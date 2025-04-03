@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Donas"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-27 12:04:46 a. m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLVU3QTZMMjc7MjAyNS0wMy0yNjsxMTo0MzoyOCBwLiBtLjszMjM4"/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLVU3QTZMMjc7MjAyNS0wMy0yNzsxMjowNDo0NiBhLiBtLjsxOzMzMzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Donas, cantidad, total" type="Integer" array="False" size=""/>
+            <assign variable="Donas" expression="10"/>
+            <output expression="&quot;Ingresar num donas&quot;" newline="True"/>
+            <input variable="Cantidad"/>
+            <if expression="Cantidad&gt;50">
+                <then>
+                    <assign variable="Total" expression="(Cantidad*Donas)-(Cantidad*2)"/>
+                </then>
+                <else>
+                    <if expression="Cantidad&gt;30">
+                        <then>
+                            <assign variable="Total" expression="(Cantidad*Donas)-(Cantidad*1)"/>
+                        </then>
+                        <else>
+                            <assign variable="Total" expression="(Cantidad*Donas)"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
