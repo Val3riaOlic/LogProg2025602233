@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="IMC"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-06 08:26:04 p. m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLVU3QTZMMjc7MjAyNS0wNC0wNjswNjo1Mzo0NSBwLiBtLjszMjQx"/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLVU3QTZMMjc7MjAyNS0wNC0wNjswODoyNjowNCBwLiBtLjsxOzMzNDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Peso, Altura, IMC" type="Real" array="False" size=""/>
+            <declare name="Tpeso" type="String" array="False" size=""/>
+            <output expression="&quot;Ingresa tu Altura&quot;" newline="True"/>
+            <input variable="Altura"/>
+            <output expression="&quot;Ingresa tu peso&quot;" newline="True"/>
+            <input variable="Peso"/>
+            <if expression="Peso &gt; 0 &amp;&amp; Altura &gt; 0">
+                <then>
+                    <assign variable="IMC" expression="Peso/(Altura*Altura)"/>
+                    <if expression="IMC &lt;= 18.4">
+                        <then>
+                            <assign variable="Tpeso" expression="&quot;Bajo peso&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="IMC &lt;= 24.9">
+                                <then>
+                                    <assign variable="Tpeso" expression="&quot;Normal&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="IMC &lt;= 29.9">
+                                        <then>
+                                            <assign variable="Tpeso" expression="&quot;Sobrepeso&quot;"/>
+                                        </then>
+                                        <else>
+                                            <if expression="IMC &lt;= 34.9">
+                                                <then>
+                                                    <assign variable="Tpeso" expression="&quot;Obesidad clase 1&quot;"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="IMC &lt;= 39.9">
+                                                        <then>
+                                                            <assign variable="Tpeso" expression="&quot;Obesidad clase 2&quot;"/>
+                                                        </then>
+                                                        <else>
+                                                            <assign variable="Tpeso" expression="&quot;Obesidad clase 3&quot;"/>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <output expression="&quot;Tu indice de masa corporal es de grado:&quot; &amp; Tpeso &amp; &quot;( IMC )&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Valores no validos&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
