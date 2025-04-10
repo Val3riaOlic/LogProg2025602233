@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="SucesionFibonacci"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-09 10:19:56 p. m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLVU3QTZMMjc7MjAyNS0wNC0wOTswODoxMzozNiBwLiBtLjszMjQy"/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLVU3QTZMMjc7MjAyNS0wNC0wOTsxMDoxOTo1NiBwLiBtLjsyOzMzNTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, i, x" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="1"/>
+            <assign variable="b" expression="2"/>
+            <assign variable="i" expression="1"/>
+            <while expression="i &lt; 64">
+                <assign variable="x" expression="a+b"/>
+                <assign variable="a" expression="b"/>
+                <assign variable="b" expression="x"/>
+                <assign variable="i" expression="i + 1"/>
+                <output expression="a" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
